@@ -9,3 +9,4 @@ The APP designer feature of MATLAB has been Implemented out here.
 
 ### The Screenshot of Frontend of GUI.
 
+![Image of GUI](https://github.com/garvitraj/CalorieMeter-MATLAB/blob/main/Code/Matlab_GUI.PNG)
