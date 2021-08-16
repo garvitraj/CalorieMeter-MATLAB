@@ -503,3 +503,228 @@ classdef caloriemeter_matlab < matlab.apps.AppBase
                     app.MultiplierEditField_34.Visible = 'on';
              end
         end
+ % Value changed function: CurdCheckBox
+        function CurdCheckBoxValueChanged(app, event)
+            value = app.CurdCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_33.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_33.Visible = 'on';
+             end
+        end
+        % Value changed function: ChapatiCheckBox_2
+        function ChapatiCheckBox_2ValueChanged(app, event)
+            value = app.ChapatiCheckBox_2.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_38.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_38.Visible = 'on';
+             end
+        end
+        % Value changed function: TandooriNanCheckBox
+        function TandooriNanCheckBoxValueChanged(app, event)
+            value = app.TandooriNanCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_37.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_37.Visible = 'on';
+             end
+        end
+        % Value changed function: DaalCheckBox_2
+        function DaalCheckBox_2ValueChanged(app, event)
+            value = app.DaalCheckBox_2.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_36.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_36.Visible = 'on';
+             end
+        end
+        % Value changed function: MixVegCuriCheckBox
+        function MixVegCuriCheckBoxValueChanged(app, event)
+            value = app.MixVegCuriCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_35.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_35.Visible = 'on';
+             end
+        end
+        % Value changed function: ShahipaneerCheckBox
+        function ShahipaneerCheckBoxValueChanged(app, event)
+            value = app.ShahipaneerCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_40.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_40.Visible = 'on';
+             end
+        end
+        % Value changed function: PaalakPannerCheckBox
+        function PaalakPannerCheckBoxValueChanged(app, event)
+            value = app.PaalakPannerCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_39.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_39.Visible = 'on';
+             end
+        end
+        % Button pushed function: CalculateButton
+        function CalculateButtonPushed(app, event)
+            final_result = app.TotalCaloriesEditField.Value+app.TotalCaloriesEditField_2.Value+app.TotalCaloriesEditField_3.Value+app.TotalCaloriesEditField_4.Value;
+            
+            app.TotalCaloriesConsumedInADayEditField.Value = final_result;
+        end
+    end
+    % Component initialization
+    methods (Access = private)
+        % Create UIFigure and components
+        function createComponents(app)
+            % Create UIFigure and hide until all components are created
+            app.UIFigure = uifigure('Visible', 'off');
+            app.UIFigure.Color = [0.298 0.6039 0.1647];
+            app.UIFigure.Position = [100 100 1135 614];
+            app.UIFigure.Name = 'MATLAB App';
+            app.UIFigure.CloseRequestFcn = createCallbackFcn(app, @ButtonPushed, true);
+            % Create CaloriemeterLabel
+            app.CaloriemeterLabel = uilabel(app.UIFigure);
+            app.CaloriemeterLabel.FontName = 'Dialog';
+            app.CaloriemeterLabel.FontSize = 30;
+            app.CaloriemeterLabel.FontWeight = 'bold';
+            app.CaloriemeterLabel.Position = [487 560 188 36];
+            app.CaloriemeterLabel.Text = 'Caloriemeter';
+            % Create BreakfastPanel
+            app.BreakfastPanel = uipanel(app.UIFigure);
+            app.BreakfastPanel.TitlePosition = 'centertop';
+            app.BreakfastPanel.Title = 'Breakfast';
+            app.BreakfastPanel.BackgroundColor = [0.6431 0.8706 0.0078];
+            app.BreakfastPanel.FontName = 'Monospaced';
+            app.BreakfastPanel.FontWeight = 'bold';
+            app.BreakfastPanel.FontSize = 20;
+            app.BreakfastPanel.Position = [19 60 260 487];
+            % Create IdliCheckBox
+            app.IdliCheckBox = uicheckbox(app.BreakfastPanel);
+            app.IdliCheckBox.ValueChangedFcn = createCallbackFcn(app, @IdliCheckBoxValueChanged, true);
+            app.IdliCheckBox.Text = 'Idli';
+            app.IdliCheckBox.FontName = 'Lucida Sans';
+            app.IdliCheckBox.FontWeight = 'bold';
+            app.IdliCheckBox.Position = [27 398 42 22];
+            % Create CalculateForBreakfastButton
+            app.CalculateForBreakfastButton = uibutton(app.BreakfastPanel, 'push');
+            app.CalculateForBreakfastButton.ButtonPushedFcn = createCallbackFcn(app, @CalculateForBreakfastButtonPushed, true);
+            app.CalculateForBreakfastButton.BackgroundColor = [0.4627 0.7294 0.1059];
+            app.CalculateForBreakfastButton.FontName = 'Liberation Mono';
+            app.CalculateForBreakfastButton.FontWeight = 'bold';
+            app.CalculateForBreakfastButton.Position = [49 65 149 22];
+            app.CalculateForBreakfastButton.Text = 'Calculate For Breakfast';
+            % Create TotalCaloriesEditFieldLabel
+            app.TotalCaloriesEditFieldLabel = uilabel(app.BreakfastPanel);
+            app.TotalCaloriesEditFieldLabel.HorizontalAlignment = 'right';
+            app.TotalCaloriesEditFieldLabel.FontWeight = 'bold';
+            app.TotalCaloriesEditFieldLabel.Position = [21 17 83 22];
+            app.TotalCaloriesEditFieldLabel.Text = 'Total Calories';
+            % Create TotalCaloriesEditField
+            app.TotalCaloriesEditField = uieditfield(app.BreakfastPanel, 'numeric');
+            app.TotalCaloriesEditField.FontWeight = 'bold';
+            app.TotalCaloriesEditField.Position = [120 17 100 22];
+            % Create MultiplierEditField
+            app.MultiplierEditField = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField.Visible = 'off';
+            app.MultiplierEditField.Position = [157 398 38 22];
+            % Create MultiplierEditField_2
+            app.MultiplierEditField_2 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_2.ValueChangedFcn = createCallbackFcn(app, @MultiplierEditField_2ValueChanged, true);
+            app.MultiplierEditField_2.Visible = 'off';
+            app.MultiplierEditField_2.Position = [157 364 38 22];
+            % Create SambharCheckBox
+            app.SambharCheckBox = uicheckbox(app.BreakfastPanel);
+            app.SambharCheckBox.ValueChangedFcn = createCallbackFcn(app, @SambharCheckBoxValueChanged, true);
+            app.SambharCheckBox.Text = 'Sambhar';
+            app.SambharCheckBox.FontName = 'Lucida Sans';
+            app.SambharCheckBox.FontWeight = 'bold';
+            app.SambharCheckBox.Position = [27 364 76 22];
+            % Create MultiplierEditField_3
+            app.MultiplierEditField_3 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_3.Visible = 'off';
+            app.MultiplierEditField_3.Position = [157 299 38 22];
+            % Create VadaCheckBox
+            app.VadaCheckBox = uicheckbox(app.BreakfastPanel);
+            app.VadaCheckBox.ValueChangedFcn = createCallbackFcn(app, @VadaCheckBoxValueChanged, true);
+            app.VadaCheckBox.Text = 'Vada';
+            app.VadaCheckBox.FontName = 'Lucida Sans';
+            app.VadaCheckBox.FontWeight = 'bold';
+            app.VadaCheckBox.Position = [27 299 52 22];
+            % Create MultiplierEditField_4
+            app.MultiplierEditField_4 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_4.Visible = 'off';
+            app.MultiplierEditField_4.Position = [157 333 38 22];
+            % Create DosaCheckBox
+            app.DosaCheckBox = uicheckbox(app.BreakfastPanel);
+            app.DosaCheckBox.ValueChangedFcn = createCallbackFcn(app, @DosaCheckBoxValueChanged, true);
+            app.DosaCheckBox.Text = 'Dosa';
+            app.DosaCheckBox.FontName = 'Lucida Sans';
+            app.DosaCheckBox.FontWeight = 'bold';
+            app.DosaCheckBox.Position = [27 333 53 22];
+            % Create MultiplierEditField_5
+            app.MultiplierEditField_5 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_5.Visible = 'off';
+            app.MultiplierEditField_5.Position = [157 172 38 22];
+            % Create PomegranateCheckBox
+            app.PomegranateCheckBox = uicheckbox(app.BreakfastPanel);
+            app.PomegranateCheckBox.ValueChangedFcn = createCallbackFcn(app, @PomegranateCheckBoxValueChanged, true);
+            app.PomegranateCheckBox.Text = 'Pomegranate';
+            app.PomegranateCheckBox.FontName = 'Lucida Sans';
+            app.PomegranateCheckBox.FontWeight = 'bold';
+            app.PomegranateCheckBox.Position = [27 172 103 22];
+            % Create MultiplierEditField_6
+            app.MultiplierEditField_6 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_6.Visible = 'off';
+            app.MultiplierEditField_6.Position = [157 206 38 22];
+            % Create UttapamCheckBox
+            app.UttapamCheckBox = uicheckbox(app.BreakfastPanel);
+            app.UttapamCheckBox.ValueChangedFcn = createCallbackFcn(app, @UttapamCheckBoxValueChanged, true);
+            app.UttapamCheckBox.Text = 'Uttapam';
+            app.UttapamCheckBox.FontName = 'Lucida Sans';
+            app.UttapamCheckBox.FontWeight = 'bold';
+            app.UttapamCheckBox.Position = [27 206 74 22];
+            % Create MultiplierEditField_7
+            app.MultiplierEditField_7 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_7.Visible = 'off';
+            app.MultiplierEditField_7.Position = [157 237 38 22];
+            % Create PohaCheckBox_2
+            app.PohaCheckBox_2 = uicheckbox(app.BreakfastPanel);
+            app.PohaCheckBox_2.ValueChangedFcn = createCallbackFcn(app, @PohaCheckBox_2ValueChanged, true);
+            app.PohaCheckBox_2.Text = 'Poha';
+            app.PohaCheckBox_2.FontName = 'Lucida Sans';
+            app.PohaCheckBox_2.FontWeight = 'bold';
+            app.PohaCheckBox_2.Position = [27 237 52 22];
+            % Create MultiplierEditField_8
+            app.MultiplierEditField_8 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_8.Visible = 'off';
+            app.MultiplierEditField_8.Position = [157 271 38 22];
+            % Create UpmaCheckBox
+            app.UpmaCheckBox = uicheckbox(app.BreakfastPanel);
+            app.UpmaCheckBox.ValueChangedFcn = createCallbackFcn(app, @UpmaCheckBoxValueChanged, true);
+            app.UpmaCheckBox.Text = 'Upma';
+            app.UpmaCheckBox.FontName = 'Lucida Sans';
+            app.UpmaCheckBox.FontWeight = 'bold';
+            app.UpmaCheckBox.Position = [27 271 57 22];
+            % Create MultiplierEditField_9
+            app.MultiplierEditField_9 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_9.Visible = 'off';
+            app.MultiplierEditField_9.Position = [157 107 38 22];
+            % Create BananaCheckBox
+            app.BananaCheckBox = uicheckbox(app.BreakfastPanel);
+            app.BananaCheckBox.ValueChangedFcn = createCallbackFcn(app, @BananaCheckBoxValueChanged, true);
+            app.BananaCheckBox.Text = 'Banana';
+            app.BananaCheckBox.FontName = 'Lucida Sans';
+            app.BananaCheckBox.FontWeight = 'bold';
+            app.BananaCheckBox.Position = [27 107 66 22];
+            % Create MultiplierEditField_10
+            app.MultiplierEditField_10 = uieditfield(app.BreakfastPanel, 'numeric');
+            app.MultiplierEditField_10.Visible = 'off';
+            app.MultiplierEditField_10.Position = [157 141 38 22];
