@@ -332,3 +332,174 @@ classdef caloriemeter_matlab < matlab.apps.AppBase
                     app.MultiplierEditField_17.Visible = 'on';
             end
         end
+        
+       % Value changed function: DaalFryCheckBox
+        function DaalFryCheckBoxValueChanged(app, event)
+            value = app.DaalFryCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_16.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_16.Visible = 'on';
+            end
+        end
+        % Value changed function: RiceCheckBox
+        function RiceCheckBoxValueChanged(app, event)
+            value = app.RiceCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_15.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_15.Visible = 'on';
+            end
+        end
+        % Value changed function: BiryaniCheckBox
+        function BiryaniCheckBoxValueChanged(app, event)
+            value = app.BiryaniCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_20.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_20.Visible = 'on';
+            end
+        end
+        % Value changed function: PaneerButterMasalaCheckBox
+        function PaneerButterMasalaCheckBoxValueChanged(app, event)
+            value = app.PaneerButterMasalaCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_19.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_19.Visible = 'on';
+            end
+        end
+        % Value changed function: SandwichCheckBox
+        function SandwichCheckBoxValueChanged(app, event)
+            value = app.SandwichCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_21.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_21.Visible = 'on';
+            end
+        end
+        % Value changed function: EggSandwichCheckBox
+        function EggSandwichCheckBoxValueChanged(app, event)
+            value = app.EggSandwichCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_22.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_22.Visible = 'on';
+            end
+        end
+        % Value changed function: TeaCheckBox
+        function TeaCheckBoxValueChanged(app, event)
+            value = app.TeaCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_24.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_24.Visible = 'on';
+            end
+        end
+        % Value changed function: CoffeeCheckBox
+        function CoffeeCheckBoxValueChanged(app, event)
+            value = app.CoffeeCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_23.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_23.Visible = 'on';
+            end
+        end
+        % Value changed function: GreenTeaCheckBox
+        function GreenTeaCheckBoxValueChanged(app, event)
+            value = app.GreenTeaCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_28.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_28.Visible = 'on';
+            end
+        end
+        % Value changed function: SamossaCheckBox
+        function SamossaCheckBoxValueChanged(app, event)
+            value = app.SamossaCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_27.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_27.Visible = 'on';
+            end
+        end
+        % Value changed function: ChipsCheckBox
+        function ChipsCheckBoxValueChanged(app, event)
+            value = app.ChipsCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_26.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_26.Visible = 'on';
+            end
+        end
+        % Value changed function: ColdDrinksCheckBox
+        function ColdDrinksCheckBoxValueChanged(app, event)
+            value = app.ColdDrinksCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_25.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_25.Visible = 'on';
+            end
+        end
+        % Value changed function: PaniPuriCheckBox
+        function PaniPuriCheckBoxValueChanged(app, event)
+            value = app.PaniPuriCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_30.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_30.Visible = 'on';
+            end
+        end
+        % Value changed function: PaneerRollCheckBox
+        function PaneerRollCheckBoxValueChanged(app, event)
+            value = app.PaneerRollCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_29.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_29.Visible = 'on';
+            end
+        end
+        % Value changed function: TomatoRiceCheckBox
+        function TomatoRiceCheckBoxValueChanged(app, event)
+            value = app.TomatoRiceCheckBox.Value;
+             switch value
+                case 0
+                    app.MultiplierEditField_31.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_31.Visible = 'on';
+            end
+        end
+        % Value changed function: JeeraRiceCheckBox
+        function JeeraRiceCheckBoxValueChanged(app, event)
+            value = app.JeeraRiceCheckBox.Value;
+              switch value
+                case 0
+                    app.MultiplierEditField_32.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_32.Visible = 'on';
+             end
+        end
+        % Value changed function: FriedRiceCheckBox
+        function FriedRiceCheckBoxValueChanged(app, event)
+            value = app.FriedRiceCheckBox.Value;
+            switch value
+                case 0
+                    app.MultiplierEditField_34.Visible = 'off';
+                case 1 
+                    app.MultiplierEditField_34.Visible = 'on';
+             end
+        end
