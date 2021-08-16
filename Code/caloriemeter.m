@@ -971,4 +971,275 @@ classdef caloriemeter_matlab < matlab.apps.AppBase
             app.TeaCheckBox.FontName = 'Lucida Sans';
             app.TeaCheckBox.FontWeight = 'bold';
             app.TeaCheckBox.Position = [27 333 44 22];
-            
+            % Create MultiplierEditField_25
+            app.MultiplierEditField_25 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_25.Visible = 'off';
+            app.MultiplierEditField_25.Position = [166 172 38 22];
+            % Create ColdDrinksCheckBox
+            app.ColdDrinksCheckBox = uicheckbox(app.SnacksPanel);
+            app.ColdDrinksCheckBox.ValueChangedFcn = createCallbackFcn(app, @ColdDrinksCheckBoxValueChanged, true);
+            app.ColdDrinksCheckBox.Text = 'Cold Drinks';
+            app.ColdDrinksCheckBox.FontName = 'Lucida Sans';
+            app.ColdDrinksCheckBox.FontWeight = 'bold';
+            app.ColdDrinksCheckBox.Position = [27 172 95 22];
+            % Create MultiplierEditField_26
+            app.MultiplierEditField_26 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_26.Visible = 'off';
+            app.MultiplierEditField_26.Position = [166 206 38 22];
+            % Create ChipsCheckBox
+            app.ChipsCheckBox = uicheckbox(app.SnacksPanel);
+            app.ChipsCheckBox.ValueChangedFcn = createCallbackFcn(app, @ChipsCheckBoxValueChanged, true);
+            app.ChipsCheckBox.Text = 'Chips';
+            app.ChipsCheckBox.FontName = 'Lucida Sans';
+            app.ChipsCheckBox.FontWeight = 'bold';
+            app.ChipsCheckBox.Position = [27 206 57 22];
+            % Create MultiplierEditField_27
+            app.MultiplierEditField_27 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_27.Visible = 'off';
+            app.MultiplierEditField_27.Position = [166 237 38 22];
+            % Create SamossaCheckBox
+            app.SamossaCheckBox = uicheckbox(app.SnacksPanel);
+            app.SamossaCheckBox.ValueChangedFcn = createCallbackFcn(app, @SamossaCheckBoxValueChanged, true);
+            app.SamossaCheckBox.Text = 'Samossa';
+            app.SamossaCheckBox.FontName = 'Lucida Sans';
+            app.SamossaCheckBox.FontWeight = 'bold';
+            app.SamossaCheckBox.Position = [27 237 76 22];
+            % Create MultiplierEditField_28
+            app.MultiplierEditField_28 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_28.Visible = 'off';
+            app.MultiplierEditField_28.Position = [166 271 38 22];
+            % Create GreenTeaCheckBox
+            app.GreenTeaCheckBox = uicheckbox(app.SnacksPanel);
+            app.GreenTeaCheckBox.ValueChangedFcn = createCallbackFcn(app, @GreenTeaCheckBoxValueChanged, true);
+            app.GreenTeaCheckBox.Text = 'Green Tea';
+            app.GreenTeaCheckBox.FontName = 'Lucida Sans';
+            app.GreenTeaCheckBox.FontWeight = 'bold';
+            app.GreenTeaCheckBox.Position = [27 271 85 22];
+            % Create MultiplierEditField_29
+            app.MultiplierEditField_29 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_29.Visible = 'off';
+            app.MultiplierEditField_29.Position = [166 107 38 22];
+            % Create PaneerRollCheckBox
+            app.PaneerRollCheckBox = uicheckbox(app.SnacksPanel);
+            app.PaneerRollCheckBox.ValueChangedFcn = createCallbackFcn(app, @PaneerRollCheckBoxValueChanged, true);
+            app.PaneerRollCheckBox.Text = 'Paneer Roll';
+            app.PaneerRollCheckBox.FontName = 'Lucida Sans';
+            app.PaneerRollCheckBox.FontWeight = 'bold';
+            app.PaneerRollCheckBox.Position = [27 107 91 22];
+            % Create MultiplierEditField_30
+            app.MultiplierEditField_30 = uieditfield(app.SnacksPanel, 'numeric');
+            app.MultiplierEditField_30.Visible = 'off';
+            app.MultiplierEditField_30.Position = [166 141 38 22];
+            % Create PaniPuriCheckBox
+            app.PaniPuriCheckBox = uicheckbox(app.SnacksPanel);
+            app.PaniPuriCheckBox.ValueChangedFcn = createCallbackFcn(app, @PaniPuriCheckBoxValueChanged, true);
+            app.PaniPuriCheckBox.Text = 'Pani Puri';
+            app.PaniPuriCheckBox.FontName = 'Lucida Sans';
+            app.PaniPuriCheckBox.FontWeight = 'bold';
+            app.PaniPuriCheckBox.Position = [27 141 77 22];
+            % Create ItemsLabel_3
+            app.ItemsLabel_3 = uilabel(app.SnacksPanel);
+            app.ItemsLabel_3.HorizontalAlignment = 'center';
+            app.ItemsLabel_3.FontName = 'Bookman';
+            app.ItemsLabel_3.FontWeight = 'bold';
+            app.ItemsLabel_3.Position = [30 430 36 22];
+            app.ItemsLabel_3.Text = 'Items';
+            % Create ServingsLabel_3
+            app.ServingsLabel_3 = uilabel(app.SnacksPanel);
+            app.ServingsLabel_3.HorizontalAlignment = 'center';
+            app.ServingsLabel_3.FontName = 'Bookman';
+            app.ServingsLabel_3.FontWeight = 'bold';
+            app.ServingsLabel_3.Position = [158 430 56 22];
+            app.ServingsLabel_3.Text = 'Servings';
+            % Create DinnerPanel
+            app.DinnerPanel = uipanel(app.UIFigure);
+            app.DinnerPanel.TitlePosition = 'centertop';
+            app.DinnerPanel.Title = 'Dinner';
+            app.DinnerPanel.BackgroundColor = [0.6431 0.8706 0.0078];
+            app.DinnerPanel.FontName = 'Monospaced';
+            app.DinnerPanel.FontWeight = 'bold';
+            app.DinnerPanel.FontSize = 20;
+            app.DinnerPanel.Position = [861 60 260 487];
+            % Create TomatoRiceCheckBox
+            app.TomatoRiceCheckBox = uicheckbox(app.DinnerPanel);
+            app.TomatoRiceCheckBox.ValueChangedFcn = createCallbackFcn(app, @TomatoRiceCheckBoxValueChanged, true);
+            app.TomatoRiceCheckBox.Text = 'Tomato Rice';
+            app.TomatoRiceCheckBox.FontName = 'Lucida Sans';
+            app.TomatoRiceCheckBox.FontWeight = 'bold';
+            app.TomatoRiceCheckBox.Position = [27 398 99 22];
+            % Create CalculateForDinnerButton
+            app.CalculateForDinnerButton = uibutton(app.DinnerPanel, 'push');
+            app.CalculateForDinnerButton.ButtonPushedFcn = createCallbackFcn(app, @CalculateForDinnerButtonPushed, true);
+            app.CalculateForDinnerButton.BackgroundColor = [0.4627 0.7294 0.1059];
+            app.CalculateForDinnerButton.FontName = 'Liberation Mono';
+            app.CalculateForDinnerButton.FontWeight = 'bold';
+            app.CalculateForDinnerButton.Position = [55 65 136 22];
+            app.CalculateForDinnerButton.Text = 'Calculate  For Dinner';
+            % Create TotalCaloriesEditField_4Label
+            app.TotalCaloriesEditField_4Label = uilabel(app.DinnerPanel);
+            app.TotalCaloriesEditField_4Label.HorizontalAlignment = 'right';
+            app.TotalCaloriesEditField_4Label.FontWeight = 'bold';
+            app.TotalCaloriesEditField_4Label.Position = [23 17 83 22];
+            app.TotalCaloriesEditField_4Label.Text = 'Total Calories';
+            % Create TotalCaloriesEditField_4
+            app.TotalCaloriesEditField_4 = uieditfield(app.DinnerPanel, 'numeric');
+            app.TotalCaloriesEditField_4.FontWeight = 'bold';
+            app.TotalCaloriesEditField_4.Position = [122 17 100 22];
+            % Create MultiplierEditField_31
+            app.MultiplierEditField_31 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_31.Visible = 'off';
+            app.MultiplierEditField_31.Position = [157 398 38 22];
+            % Create MultiplierEditField_32
+            app.MultiplierEditField_32 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_32.Visible = 'off';
+            app.MultiplierEditField_32.Position = [157 364 38 22];
+            % Create JeeraRiceCheckBox
+            app.JeeraRiceCheckBox = uicheckbox(app.DinnerPanel);
+            app.JeeraRiceCheckBox.ValueChangedFcn = createCallbackFcn(app, @JeeraRiceCheckBoxValueChanged, true);
+            app.JeeraRiceCheckBox.Text = 'Jeera Rice';
+            app.JeeraRiceCheckBox.FontName = 'Lucida Sans';
+            app.JeeraRiceCheckBox.FontWeight = 'bold';
+            app.JeeraRiceCheckBox.Position = [27 364 83 22];
+            % Create MultiplierEditField_33
+            app.MultiplierEditField_33 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_33.Visible = 'off';
+            app.MultiplierEditField_33.Position = [157 299 38 22];
+            % Create CurdCheckBox
+            app.CurdCheckBox = uicheckbox(app.DinnerPanel);
+            app.CurdCheckBox.ValueChangedFcn = createCallbackFcn(app, @CurdCheckBoxValueChanged, true);
+            app.CurdCheckBox.Text = 'Curd';
+            app.CurdCheckBox.FontName = 'Lucida Sans';
+            app.CurdCheckBox.FontWeight = 'bold';
+            app.CurdCheckBox.Position = [27 299 52 22];
+            % Create MultiplierEditField_34
+            app.MultiplierEditField_34 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_34.Visible = 'off';
+            app.MultiplierEditField_34.Position = [157 333 38 22];
+            % Create FriedRiceCheckBox
+            app.FriedRiceCheckBox = uicheckbox(app.DinnerPanel);
+            app.FriedRiceCheckBox.ValueChangedFcn = createCallbackFcn(app, @FriedRiceCheckBoxValueChanged, true);
+            app.FriedRiceCheckBox.Text = 'Fried Rice';
+            app.FriedRiceCheckBox.FontName = 'Lucida Sans';
+            app.FriedRiceCheckBox.FontWeight = 'bold';
+            app.FriedRiceCheckBox.Position = [27 333 83 22];
+            % Create MultiplierEditField_35
+            app.MultiplierEditField_35 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_35.Visible = 'off';
+            app.MultiplierEditField_35.Position = [157 172 38 22];
+            % Create MixVegCuriCheckBox
+            app.MixVegCuriCheckBox = uicheckbox(app.DinnerPanel);
+            app.MixVegCuriCheckBox.ValueChangedFcn = createCallbackFcn(app, @MixVegCuriCheckBoxValueChanged, true);
+            app.MixVegCuriCheckBox.Text = 'Mix Veg Curi';
+            app.MixVegCuriCheckBox.FontName = 'Lucida Sans';
+            app.MixVegCuriCheckBox.FontWeight = 'bold';
+            app.MixVegCuriCheckBox.Position = [27 172 101 22];
+            % Create MultiplierEditField_36
+            app.MultiplierEditField_36 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_36.Visible = 'off';
+            app.MultiplierEditField_36.Position = [157 206 38 22];
+            % Create DaalCheckBox_2
+            app.DaalCheckBox_2 = uicheckbox(app.DinnerPanel);
+            app.DaalCheckBox_2.ValueChangedFcn = createCallbackFcn(app, @DaalCheckBox_2ValueChanged, true);
+            app.DaalCheckBox_2.Text = 'Daal';
+            app.DaalCheckBox_2.FontName = 'Lucida Sans';
+            app.DaalCheckBox_2.FontWeight = 'bold';
+            app.DaalCheckBox_2.Position = [27 206 50 22];
+            % Create MultiplierEditField_37
+            app.MultiplierEditField_37 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_37.Visible = 'off';
+            app.MultiplierEditField_37.Position = [157 237 38 22];
+            % Create TandooriNanCheckBox
+            app.TandooriNanCheckBox = uicheckbox(app.DinnerPanel);
+            app.TandooriNanCheckBox.ValueChangedFcn = createCallbackFcn(app, @TandooriNanCheckBoxValueChanged, true);
+            app.TandooriNanCheckBox.Text = 'Tandoori Nan';
+            app.TandooriNanCheckBox.FontName = 'Lucida Sans';
+            app.TandooriNanCheckBox.FontWeight = 'bold';
+            app.TandooriNanCheckBox.Position = [27 237 106 22];
+            % Create MultiplierEditField_38
+            app.MultiplierEditField_38 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_38.Visible = 'off';
+            app.MultiplierEditField_38.Position = [157 271 38 22];
+            % Create ChapatiCheckBox_2
+            app.ChapatiCheckBox_2 = uicheckbox(app.DinnerPanel);
+            app.ChapatiCheckBox_2.ValueChangedFcn = createCallbackFcn(app, @ChapatiCheckBox_2ValueChanged, true);
+            app.ChapatiCheckBox_2.Text = 'Chapati';
+            app.ChapatiCheckBox_2.FontName = 'Lucida Sans';
+            app.ChapatiCheckBox_2.FontWeight = 'bold';
+            app.ChapatiCheckBox_2.Position = [27 271 69 22];
+            % Create MultiplierEditField_39
+            app.MultiplierEditField_39 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_39.Visible = 'off';
+            app.MultiplierEditField_39.Position = [157 107 38 22];
+            % Create PaalakPannerCheckBox
+            app.PaalakPannerCheckBox = uicheckbox(app.DinnerPanel);
+            app.PaalakPannerCheckBox.ValueChangedFcn = createCallbackFcn(app, @PaalakPannerCheckBoxValueChanged, true);
+            app.PaalakPannerCheckBox.Text = 'Paalak Panner';
+            app.PaalakPannerCheckBox.FontName = 'Lucida Sans';
+            app.PaalakPannerCheckBox.FontWeight = 'bold';
+            app.PaalakPannerCheckBox.Position = [27 107 109 22];
+            % Create MultiplierEditField_40
+            app.MultiplierEditField_40 = uieditfield(app.DinnerPanel, 'numeric');
+            app.MultiplierEditField_40.Visible = 'off';
+            app.MultiplierEditField_40.Position = [157 141 38 22];
+            % Create ShahipaneerCheckBox
+            app.ShahipaneerCheckBox = uicheckbox(app.DinnerPanel);
+            app.ShahipaneerCheckBox.ValueChangedFcn = createCallbackFcn(app, @ShahipaneerCheckBoxValueChanged, true);
+            app.ShahipaneerCheckBox.Text = 'Shahi paneer';
+            app.ShahipaneerCheckBox.FontName = 'Lucida Sans';
+            app.ShahipaneerCheckBox.FontWeight = 'bold';
+            app.ShahipaneerCheckBox.Position = [27 141 102 22];
+            % Create ItemsLabel_4
+            app.ItemsLabel_4 = uilabel(app.DinnerPanel);
+            app.ItemsLabel_4.HorizontalAlignment = 'center';
+            app.ItemsLabel_4.FontName = 'Bookman';
+            app.ItemsLabel_4.FontWeight = 'bold';
+            app.ItemsLabel_4.Position = [30 430 36 22];
+            app.ItemsLabel_4.Text = 'Items';
+            % Create ServingsLabel_4
+            app.ServingsLabel_4 = uilabel(app.DinnerPanel);
+            app.ServingsLabel_4.HorizontalAlignment = 'center';
+            app.ServingsLabel_4.FontName = 'Bookman';
+            app.ServingsLabel_4.FontWeight = 'bold';
+            app.ServingsLabel_4.Position = [149 430 56 22];
+            app.ServingsLabel_4.Text = 'Servings';
+            % Create TotalCaloriesConsumedInADayEditFieldLabel
+            app.TotalCaloriesConsumedInADayEditFieldLabel = uilabel(app.UIFigure);
+            app.TotalCaloriesConsumedInADayEditFieldLabel.HorizontalAlignment = 'right';
+            app.TotalCaloriesConsumedInADayEditFieldLabel.FontWeight = 'bold';
+            app.TotalCaloriesConsumedInADayEditFieldLabel.Position = [264 16 200 22];
+            app.TotalCaloriesConsumedInADayEditFieldLabel.Text = 'Total Calories Consumed In A Day';
+            % Create TotalCaloriesConsumedInADayEditField
+            app.TotalCaloriesConsumedInADayEditField = uieditfield(app.UIFigure, 'numeric');
+            app.TotalCaloriesConsumedInADayEditField.FontWeight = 'bold';
+            app.TotalCaloriesConsumedInADayEditField.Position = [479 16 100 22];
+            % Create CalculateButton
+            app.CalculateButton = uibutton(app.UIFigure, 'push');
+            app.CalculateButton.ButtonPushedFcn = createCallbackFcn(app, @CalculateButtonPushed, true);
+            app.CalculateButton.BackgroundColor = [0.4627 0.7294 0.1059];
+            app.CalculateButton.FontSize = 15;
+            app.CalculateButton.FontWeight = 'bold';
+            app.CalculateButton.Position = [617 14 100 26];
+            app.CalculateButton.Text = 'Calculate';
+            % Show the figure after all components are created
+            app.UIFigure.Visible = 'on';
+        end
+    end
+    % App creation and deletion
+    methods (Access = public)
+        % Construct app
+        function app = caloriemeter_matlab
+            % Create UIFigure and components
+            createComponents(app)
+            % Register the app with App Designer
+            registerApp(app, app.UIFigure)
+            if nargout == 0
+                clear app
+            end
+        end
+        % Code that executes before app deletion
+        function delete(app)
+            % Delete UIFigure when app is deleted
+            delete(app.UIFigure)
+        end
+    end
+end
